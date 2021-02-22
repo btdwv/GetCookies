@@ -1,12 +1,21 @@
 {
    "background": {
-      "scripts": ["background.js"],
+      "scripts": [
+         "background.js"
+      ],
       "persistent": false
    },
-   "content_scripts": [ {
-      "js": ["js/cookie.js" ],
-      "matches": [ "https://qiandao.today/*"]
-   } ],
+   "content_scripts": [
+      {
+         "js": [
+            "js/cookie.js"
+         ],
+         "matches": [
+            "https://qiandao.today/*",
+            "http://192.168.50.50:6483/*"
+         ]
+      }
+   ],
    "default_locale": "en",
    "description": "__MSG_description__",
    "icons": {
@@ -16,7 +25,12 @@
       "128": "images/logo128.png"
    },
    "manifest_version": 2,
-   "permissions": [ "cookies", "tabs", "http://*/*", "https://*/*"],
+   "permissions": [
+      "cookies",
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+   ],
    "name": "__MSG_appName__",
    "version": "0.0.6"
 }
